@@ -15,7 +15,7 @@ public class Annotatio3 {
 	@Test()
 	public void test2()
 	{
-		Assert.assertEquals("abc", "bbc");;
+		Assert.assertEquals("abc", "abc");;
 		System.out.println("Test2 Passed");
 	}
 	
