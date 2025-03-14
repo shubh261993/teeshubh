@@ -10,6 +10,7 @@ public class TypeCasting {
 	     System.out.println(k++);//2
 	     System.out.println(++k);//4
 	     System.out.println(k++);//4	
+	     System.out.println(k--);//5
 	     
 	     
 
