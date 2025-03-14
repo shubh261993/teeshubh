@@ -16,7 +16,7 @@ public class Annotatio3 {
 	public void test2()
 	{
 		Assert.assertEquals("abc", "abc");;
-		System.out.println("Test2 Passed");
+		System.out.println("Test2 Passed sucessfully");
 	}
 	
 	@Test(dependsOnMethods = {"test2"})	
