@@ -22,7 +22,7 @@ public class Annotatio3 {
 	@Test(dependsOnMethods = {"test2"})	
 	public void test3()
 	{
-		System.out.println("Test3 Passed");
+		System.out.println("Test3 Passed sucessfully");
 	}
 	
 	
