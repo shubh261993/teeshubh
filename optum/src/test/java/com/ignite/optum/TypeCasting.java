@@ -15,7 +15,6 @@ public class TypeCasting {
 	     System.out.println(--k);//2
 	     System.out.println(k--);//2
 	     System.out.println(k++);//1
-	     
 
 	}
 
