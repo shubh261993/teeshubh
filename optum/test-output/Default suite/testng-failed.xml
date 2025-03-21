@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RestAssured.CallPostAPI">
+      <class name="com.ignite.optum.RegExpression">
         <methods>
-          <include name="bookStoreAPI"/>
+          <include name="regrx"/>
         </methods>
-      </class> <!-- RestAssured.CallPostAPI -->
+      </class> <!-- com.ignite.optum.RegExpression -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
