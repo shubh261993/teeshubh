@@ -14,7 +14,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class getHttpRequest {
 	
-	String getUrl = "https://reqres.in/api/";
+	String getUrl = "https://official-joke-api.appspot.com/random_ten";
 	String postUrl = "https://bookstore.toolsqa.com/Account/v1/User";
 	RequestSpecification req = (RequestSpecification) RestAssured.given().header("Content-Type","application/json")
 			;
@@ -26,10 +26,10 @@ public class getHttpRequest {
 		try {
 			res =  req
 					//.header("Authorization","Bearer"+token)
-					.queryParam("page", "2")
-					.pathParam("user", "users")
+					//.queryParam("page", "2")
+					//.pathParam("user", "users")
 					.when()
-					.get(getUrl + "{user}/");
+					.get(getUrl);
 					
 			System.out.println(res.getContentType());
 			System.out.println(res.getStatusCode());
@@ -38,8 +38,13 @@ public class getHttpRequest {
 			System.out.println(body.asPrettyString());
 			
 			JsonPath js1 = res.jsonPath();
-			int id = js1.getInt("data.id[0]");
-			System.out.println("id  "+id);
+			
+			System.out.println(js1.getString("[-2].setup"));
+			
+//			int id = js1.getInt("data.id[0]");
+//			System.out.println("id  "+id);
+//			
+//			System.out.println(js1.getString("support.url"));
 			
 //		((RestAssured) res1).get(getUrl+"users/");
 //		System.out.println(res1.asPrettyString());
