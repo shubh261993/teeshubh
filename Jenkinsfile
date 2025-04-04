@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'mvn clean test'
+                bat 'mvn -f C:\Users\Shubham\.jenkins\workspace\Tinder\optum\pom.xml test -Dtest=Annotatio3'
             }
             post {
                 always {
