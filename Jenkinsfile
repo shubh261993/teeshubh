@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'mvn -f C:\Users\Shubham\.jenkins\workspace\Tinder\optum\pom.xml test -Dtest=Annotatio3'
+                bat 'mvn -f C:\Users\Shubham\.jenkins\workspace\Cucumber_Pipeline\optum\pom.xml test -Dtest=Annotatio3'
             }
             post {
                 always {
