@@ -17,9 +17,6 @@ pipeline {
             steps {
                 bat 'mvn -f C:\\Users\\Shubham\\.jenkins\\workspace\\Cucumber_Pipeline\\optum\\pom.xml test -Dtest=Annotatio3'
             }
-        }
-            
-        stage('Publish Test Results') {
             post {
                 always {
                     // Publish TestNG results
