@@ -4,7 +4,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-               git 'https://github.com/shubh261993/teeshubh.git'
+               echo 'Already configured in Jenkin system.'
             }
         }
         stage('Build') {
