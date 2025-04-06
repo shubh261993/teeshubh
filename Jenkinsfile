@@ -26,5 +26,6 @@ pipeline {
                     publishTestNGResults(testNGXMLReportPattern: '**/testng-results.xml')
                 }
             }
+        }
     }
 }
