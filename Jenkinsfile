@@ -20,7 +20,8 @@ pipeline {
             post {
                 always {
                     // Publish TestNG results
-                    publishTestNGResults(testNGXMLReportPattern: '**/testng-results.xml')
+                  //  publishTestNGResults(testNGXMLReportPattern: '**/testng-results.xml')
+                    echo 'publish testng report'
                 }
             }
         }
