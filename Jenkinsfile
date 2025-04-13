@@ -19,9 +19,7 @@ pipeline {
             }
             post {
                 always {
-                    // Publish TestNG results
-                  //  publishTestNGResults(testNGXMLReportPattern: '**/testng-results.xml')
-                      publishTestNGResults(testNGXMLReportPattern: 'C:\\Users\\Shubham\\.jenkins\\workspace\\Cucumber_Pipeline\\optum\\target\\surefire-reports\\testng-results.xml')
+                        testNG(reportFilenamePattern: 'C:\\Users\\Shubham\\.jenkins\\workspace\\Cucumber_Pipeline\\optum\\target\\surefire-reports\\testng-results.xml')
                     echo 'publish testng report'
                 }
             }
