@@ -22,6 +22,12 @@ pipeline {
                         testNG(reportFilenamePattern: '**/testng-results.xml')
                     echo 'publish testng report'
                 }
+                success {
+                         mail to: 'shubhammittal440@gmail.com', subject: 'Build Success', body: 'The build was successful!'
+                        }
+                failure {
+                          mail to: 'shubhammittal440@gmail.com', subject: 'Build Failure', body: 'The build failed!'
+                        }
             }
         }
     }
