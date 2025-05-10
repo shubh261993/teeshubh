@@ -32,5 +32,6 @@ public class Annotatio3 {
 	public void group()
 	{
 		System.out.println("I m groups");
+		System.out.println("I m not a groups");
 	}
 }
