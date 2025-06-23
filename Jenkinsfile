@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    parameters{
+        choice(name:'suite',choices:['smoke','regression'],description:'choose suite to run')
+    }
     stages {
 
         stage('Checkout') {
@@ -16,6 +19,19 @@ pipeline {
         }
         stage('Test') {
             steps {
+                script {
+                    def command = ''
+                    if(params.SUITE == 'smoke'){
+                        command = 'mvn -f C:\\Users\\Shubham\\.jenkins\\workspace\\Cucumber_Pipeline\\optum\\pom.xml test -Dtest=Annotatio3'
+                    } else if (params.SUITE == 'regression')
+                    {
+                        command = 'mvn -f C:\\Users\\Shubham\\.jenkins\\workspace\\Cucumber_Pipeline\\optum\\pom.xml test -Dtest=TestNGAnnotation'
+                    } else {
+                        error("Unknown test suites: ${params.SUITE}")
+                    }
+                    echo "Executing: ${command}"
+                    bat "${command}"
+                }
                 bat 'mvn -f C:\\Users\\Shubham\\.jenkins\\workspace\\Cucumber_Pipeline\\optum\\pom.xml test -Dtest=Annotatio3'
             }
             post {
