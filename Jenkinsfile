@@ -29,8 +29,6 @@ pipeline {
                     } else {
                         error("Unknown test suites: ${params.SUITE}")
                     }
-                    echo "Executing: ${command}"
-                    bat "${command}"
                 }
             }
             post {
